@@ -12,9 +12,12 @@ HTML
 end
 
 post '/users' do
-  redirect '/'
+  redirect '/users'
+end
+
+get '/users/:id' do
 end
 
 delete '/users/:id' do
-  redirect '/'
+  redirect '/users'
 end

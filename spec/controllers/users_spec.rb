@@ -1,6 +1,9 @@
 require_relative '../spec_helper'
 
 describe "Users Controller" do
+let(:user) {User.create(name:"Vivek Ratkalkar", email: "vr@email.com", password: "password")}
+
+
 
   it 'responds to get /' do
     get '/'
@@ -13,7 +16,7 @@ describe "Users Controller" do
   end
 
   it 'responds to get /users/:id' do
-    get '/users/1'
+    get "/users/#{user.id}"
     expect(last_response).to be_ok
   end
 
