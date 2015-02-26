@@ -2,14 +2,11 @@ require 'sinatra'
 
 get '/' do
   <<-HTML
-<p>
-Welcome to my LightSaber.  Prepare to be amazed.
-<p>
-<a href='/sound'>Hear my swooshy sound!</a>
+  <p>Welcome to the homepage</p>
   HTML
 end
 
-get '/sound' do
+get '/' do
   <<-HTML
 <audio controls>
   <source src="http://soundbible.com/grab.php?id=19&type=wav" type="audio/wav">
