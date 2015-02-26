@@ -6,13 +6,22 @@ get '/' do
   HTML
 end
 
-get '/' do
-  <<-HTML
-<audio controls>
-  <source src="http://soundbible.com/grab.php?id=19&type=wav" type="audio/wav">
-  <source src="http://soundbible.com/grab.php?id=19&type=mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-  HTML
+get '/users' do
+end
+
+get '/users/new' do
+<<-HTML
+<form action='/users' method='POST'>
+  Username: <input type='text' name='username' />
+  Password: <input type='password' name='password' />
+  <input type='submit' value='Submit' />
+</form>
+HTML
+end
+
+post '/users' do
+end
+
+delete '/users/:id' do
 end
 
