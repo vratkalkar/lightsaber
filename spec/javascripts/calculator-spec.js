@@ -12,12 +12,12 @@ describe("Calculator Subtract", function() {
 
 describe("Calculator Divide", function() {
   it("should divide two numbers", function() {
-    expect(calculator.add(4,2)).toEqual(2);
+    expect(calculator.div(4,2)).toEqual(2);
   });
 });
 
 describe("Calculator Multiply", function() {
-  it("should sum two numbers", function() {
-    expect(calculator.add(4,2)).toEqual(8);
+  it("should multiply two numbers", function() {
+    expect(calculator.mul(4,2)).toEqual(8);
   });
 });
