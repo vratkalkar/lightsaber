@@ -3,7 +3,7 @@ get '/' do
 end
 
 get '/signup' do
-  erb :signup
+  erb :_form, layout: false
 end
 
 post '/register_user.json' do

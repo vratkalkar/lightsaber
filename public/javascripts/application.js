@@ -9,7 +9,7 @@
     type: "GET",
     success: function(response){
         console.log(response);
-        $("html").append(response);
+        $("#viewForm").html(response);
     },
     error: function(response){
       console.log("The form did not load");
