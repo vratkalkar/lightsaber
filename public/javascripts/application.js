@@ -1,22 +1,23 @@
-// Javascript Goes Here~
-//
 
-$(document).ready(function(event){
-  event.preventDefault();
-  $.ajax({
-    url: "/index.json",
+  $(document).ready(function(){
+
+    $('#formButton').on('click',function(){
+    console.log("this is in the click event");
+
+    $.ajax({
+    url: "/signup",
     type: "GET",
-    data: {},
     success: function(response){
         console.log(response);
+        $("html").append(response);
     },
     error: function(response){
-      console.log(response);
+      console.log("The form did not load");
     }
   });
 
   $.ajax({
-    url: "/index.json",
+    url: "/register_user.json",
     type: "POST",
     data: {},
     success: function(response){
@@ -25,7 +26,6 @@ $(document).ready(function(event){
     error: function(response){
       console.log(response);
     }
+   });
   });
-
-
-});
+ });
