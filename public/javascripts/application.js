@@ -5,7 +5,7 @@
     console.log("this is in the click event");
 
     $.ajax({
-    url: "/",
+    url: "/form",
     type: "GET",
     success: function(response){
         console.log(response);
@@ -16,16 +16,16 @@
     }
   });
 
-  $.ajax({
-    url: "/register_user.json",
-    type: "POST",
-    data: {},
-    success: function(response){
-        console.log(response);
-    },
-    error: function(response){
-      console.log(response);
-    }
+  // $.ajax({
+  //   url: "/register_user.json",
+  //   type: "POST",
+  //   data: {},
+  //   success: function(response){
+  //       console.log(response);
+  //   },
+  //   error: function(response){
+  //     console.log(response);
+  //   }
+  //  });
    });
-  });
  });

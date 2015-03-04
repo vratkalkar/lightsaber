@@ -3,6 +3,10 @@ get '/' do
   erb :index
 end
 
-post '/signup' do
+get '/form' do
+  erb :_form
+end
+
+post '/register_user.json' do
   content_type :json
 end
