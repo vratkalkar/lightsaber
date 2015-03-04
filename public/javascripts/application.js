@@ -1,11 +1,11 @@
 
   $(document).ready(function(){
 
-    $('#formButton').on('click',function(){
+    $('#formButton').on('click', function(){
     console.log("this is in the click event");
 
     $.ajax({
-    url: "/signup",
+    url: "/",
     type: "GET",
     success: function(response){
         console.log(response);

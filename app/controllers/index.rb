@@ -1,11 +1,8 @@
+# AJAX gets form partial
 get '/' do
   erb :index
 end
 
-get '/signup' do
-  erb :_form, layout: false
-end
-
-post '/register_user.json' do
+post '/signup' do
   content_type :json
 end
