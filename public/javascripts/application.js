@@ -1,8 +1,8 @@
 // Javascript Goes Here~
 //
 
-$(document).ready(function(){
-
+$(document).ready(function(event){
+  event.preventDefault();
   $.ajax({
     url: "/index.json",
     type: "GET",
