@@ -1,20 +1,20 @@
-// Javascript Goes Here~
-//
-
-function Person(name,email,phone){
+var Person = function(name,email,phone){
   this.name = name,
   this.email = email,
   this.phone = phone
 };
 
-var vivek = new Person;
+Person.prototype.greeting = function(){
+ return " You can contact " + this.name + " at " +  this.email  + " or " +  this.phone;
+};
+
+
 
 $(document).ready(function(){
 
  $("#form").submit(function(event){
-
-  console.log("form clicked");
   event.preventDefault();
+  console.log("form clicked");
   var target = $(event.target);
 
  $.ajax({
