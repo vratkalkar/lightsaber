@@ -1,7 +1,7 @@
 var Person = function(params){
-  this.name = params.name,
-  this.email = params.email,
-  this.phone = params.phone
+  this.name = params.name;
+  this.email = params.email;
+  this.phone = params.phone;
 };
 
 Person.prototype.greeting = function(){
