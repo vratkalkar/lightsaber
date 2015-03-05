@@ -1,7 +1,7 @@
-var Person = function(name,email,phone){
-  this.name = name,
-  this.email = email,
-  this.phone = phone
+var Person = function(params){
+  this.name = params.name,
+  this.email = params.email,
+  this.phone = params.phone
 };
 
 Person.prototype.greeting = function(){
@@ -12,21 +12,22 @@ Person.prototype.greeting = function(){
 
 $(document).ready(function(){
 
- $("#form").submit(function(event){
+ $("#form").on("submit", function(event){
+
   event.preventDefault();
-  console.log("form clicked");
-  var target = $(event.target);
+  console.log("button clicked");
+  var $target = $(event.target);
 
  $.ajax({
-    url: "/submit",
+    url: "/",
     type: "POST",
-    data: target.serialize(),
+    data: $target.serialize(),
     dataType: "JSON",
     success: function(response){
-      console.log(response);
+      var person = new Person(response);
     },
     error: function(response){
-      console.log(response);
+      console.log("This is an error");
     },
   });
  });
