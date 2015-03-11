@@ -11,6 +11,8 @@ gem 'rake'
 
 gem 'bcrypt'
 
+gem 'shotgun'
+
 group :test do
   gem 'rspec'
   gem 'rack-test'
